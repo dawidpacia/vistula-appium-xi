@@ -13,3 +13,4 @@ def test_division_by_zero():
 
 def test_multiply():
     assert calc.multiply(-1, -1) == 1
+        
