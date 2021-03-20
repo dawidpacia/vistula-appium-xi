@@ -7,7 +7,7 @@ def calculate_fuel(mass):
 
 
 def calculate_fuel_math_floor(mass):
-    fuel = floor(mass/3) - 2
+    fuel = floor(mass / 3) - 2
     return fuel
 
 

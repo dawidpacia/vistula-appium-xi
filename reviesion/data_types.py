@@ -2,11 +2,10 @@ var_string = "Test"  # "" vs '' -> the same
 # char not exist in python,  "a" is just a one element string
 
 var_float = 1.0
-print(1/2)
-print(1//2)
+print(1 / 2)
+print(1 // 2)
 
 var_int = 1
-
 
 var_bool = True  # False if 0, None, [], (), {}
 print(bool(1))

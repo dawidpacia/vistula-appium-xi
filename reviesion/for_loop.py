@@ -10,9 +10,9 @@ for fruit in fruits:
     print(fruit)
 
 distances = {
-"Krakow_Nicosia" : 1980,
-"Krakow_Reykjavik": 2900,
-"Krakow_Chartum": None
+    "Krakow_Nicosia": 1980,
+    "Krakow_Reykjavik": 2900,
+    "Krakow_Chartum": None
 }
 
 for city, distance in distances.items():

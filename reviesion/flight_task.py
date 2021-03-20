@@ -1,13 +1,12 @@
 route = "Krakow_Reykjavik"
 
 distances = {
-"Krakow_Nicosia" : 1980,
-"Krakow_Reykjavik": 2900,
-"Krakow_Chartum": None
+    "Krakow_Nicosia": 1980,
+    "Krakow_Reykjavik": 2900,
+    "Krakow_Chartum": None
 }
 
 distance = distances[route]
-
 
 if distance < 2000:
     cost = 2 * distance + 100
