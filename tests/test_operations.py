@@ -19,3 +19,6 @@ class TestCalculator:
         calculator.sub_values(1, 5)
         result = calculator.get_result()
         assert result == "-4"
+
+    def test_open_panel_expert(self, calculator):
+        calculator.open_expert_panel()

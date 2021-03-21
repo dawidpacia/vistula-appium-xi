@@ -1,5 +1,7 @@
 import os
 from appium import webdriver
+from appium.webdriver.common.touch_action import TouchAction
+
 
 # Returns abs path relative to this file and not cwd
 app_name = "calculator.apk"
@@ -23,6 +25,11 @@ driver.find_element_by_xpath('//android.widget.Button[@content-desc="equals"]')
 # driver.find_elements_by_class_name('android.widget.Button')
 # driver.find_element_by_css_selector("[content-desc='degree mode']")
 driver.find_element_by_android_uiautomator("UiSelector().text(\"DEG\")")
+
+actions = TouchAction(driver)
+actions.tap(x=1030, y=1500)
+actions.perform()
+
 
 
 driver.quit()

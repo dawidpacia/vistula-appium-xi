@@ -1,3 +1,7 @@
+from appium.webdriver.common.touch_action import TouchAction
+from appium.webdriver.webdriver import RemoteCommand
+
+
 class CalculatorScreen:
 
     def __init__(self, driver):
@@ -23,3 +27,8 @@ class CalculatorScreen:
         result = self.driver.find_element_by_id("result_final").text
         result = result.replace("−", "-")
         return result
+
+    def open_expert_panel(self):
+        actions = TouchAction(self.driver)
+        actions.tap(x=1030, y=1500)
+        actions.perform()
