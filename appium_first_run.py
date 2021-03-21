@@ -11,10 +11,18 @@ desired_caps = {}
 desired_caps['platformName'] = 'Android'
 desired_caps['newCommandTimeout'] = 250
 desired_caps['app'] = app_path
+desired_caps['autoGrantPermissions'] = True
+desired_caps['noReset'] = True
 
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 
-driver.find_element_by_id("formula").click()
-driver.find_element_by_accessibility_id("More options").click()
-print("stop")
+
+driver.find_element_by_id("digit_2")
+driver.find_element_by_accessibility_id("equals")
+driver.find_element_by_xpath('//android.widget.Button[@content-desc="equals"]')
+# driver.find_elements_by_class_name('android.widget.Button')
+# driver.find_element_by_css_selector("[content-desc='degree mode']")
+driver.find_element_by_android_uiautomator("UiSelector().text(\"DEG\")")
+
+
 driver.quit()
