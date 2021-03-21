@@ -1,4 +1,4 @@
-from reviesion.task_calculator import Calculator
+from revision.task_calculator import Calculator
 
 calc = Calculator()
 

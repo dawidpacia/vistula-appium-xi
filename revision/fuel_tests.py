@@ -1,4 +1,4 @@
-from reviesion.function_task import calculate_fuel
+from revision.function_task import calculate_fuel
 
 
 def test_12():
