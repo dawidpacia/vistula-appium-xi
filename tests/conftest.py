@@ -2,9 +2,11 @@ import os
 from appium import webdriver
 import pytest
 
+from screens.calculator_screen import CalculatorScreen
+
 
 @pytest.fixture(scope="class")
-def driver(request):
+def calculator(request):
 
     def close_driver():
         driver.quit()
@@ -24,4 +26,6 @@ def driver(request):
     driver.implicitly_wait(10)
 
     request.addfinalizer(close_driver)
-    return driver
+    calculator = CalculatorScreen(driver)
+
+    return calculator
